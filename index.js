@@ -11,7 +11,10 @@ const port = 5000;
 // middleware for sending JSON body to DB
 app.use(express.json());
 
-const allowedOrigins = ["http://localhost:5173"];
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://nd-task-4z6edo5bp-yashs-projects-00930977.vercel.app",
+];
 
 app.use(
   cors({
