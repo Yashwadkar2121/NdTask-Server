@@ -9,16 +9,13 @@ const addTransaction = async (req, res) => {
       username,
       amount,
       time,
-      
     });
 
     await newTransaction.save();
-    res
-      .status(201)
-      .json({
-        message: "Transaction added successfully",
-        data: newTransaction,
-      });
+    res.status(201).json({
+      message: "Transaction added successfully",
+      data: newTransaction,
+    });
   } catch (error) {
     res.status(500).json({ message: "Error adding transaction", error });
   }
