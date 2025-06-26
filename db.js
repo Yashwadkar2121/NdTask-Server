@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const connectToMongo = async () => {
   try {
     // Use only Atlas connection string
-    const connectionString = process.env.MONGODB_ATLAS_URI ;
+    const connectionString = process.env.MONGODB_ATLAS_URI;
 
     if (!connectionString) {
       throw new Error(
